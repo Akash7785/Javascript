@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CONSTRUCTOR FUNCTION</title>
+  </head>
+  <body>
+    <h1>CONSTRUCTOR FUNCTION</h1>
+  </body>
+</html>
+
+<script>
+  // NORMAL FUNCTION RETURNING AN OBJECT
+
+  // function nikeProduct(n, p) {
+  //   let product = {};
+  //   product.name = n;
+  //   product.price = p;
+  //   return product;
+  // }
+
+  // let prod1 = nikeProduct("JORDAN", 9999);
+  // console.log("PRODUCT :-", prod1);
+
+  // USING CONSTRUCTOR FUNCTION
+
+  function nikeProduct(n, p) {
+    this.name = n;
+    this.price = p;
+  }
+
+  let prod = new nikeProduct("JORDAN", 999);
+  console.log(prod);
+</script>

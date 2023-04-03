@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CONSTRUCTOR FUNCTION</title>
+  </head>
+  <body>
+    <h1>CONSTRUCTOR FUNCTION</h1>
+    <form>
+      <input type="text" name="name" id="name" placeholder="name" />
+      <input type="number" name="price" id="price" placeholder="price" />
+      <input type="submit" value="SUBMIT" />
+    </form>
+  </body>
+</html>
+
+<script>
+  function nikeProductCf(n, p) {
+    this.name = n;
+    this.price = p;
+  }
+
+  let arr = [];
+  document.querySelector("form").addEventListener("submit", myFunction);
+  function myFunction() {
+    event.preventDefault();
+    let name = document.querySelector("#name").value;
+    let price = document.querySelector("#price").value;
+    let prod = new nikeProductCf(name, price);
+    arr.push(prod);
+    console.log(arr);
+  }
+</script>
